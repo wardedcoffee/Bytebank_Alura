@@ -20,7 +20,8 @@ conta2.agencia = 102;
 
 contaCorrenteRicardo.transferir(200, conta2);
 
-console.log(conta2);
-console.log(contaCorrenteRicardo);
+conta2.saldo = 30000;
+console.log(conta2.saldo);
+
 
 
