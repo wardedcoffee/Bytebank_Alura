@@ -1,4 +1,5 @@
-export class Conta { //Herança
+export class Conta {
+  //Herança
   constructor(saldoInicial, cliente, agencia) {
     this._saldo = saldoInicial;
     this._cliente = cliente;
@@ -21,12 +22,17 @@ export class Conta { //Herança
 
   sacar(valor) {
     let taxa = 1;
+    return this._sacar(valor, taxa);
+  }
 
+  _sacar(valor, taxa) {
     const valorSacado = taxa * valor;
     if (this._saldo >= valorSacado) {
       this._saldo -= valorSacado;
       return valorSacado;
     }
+
+    return 0;
   }
 
   depositar(valor) {
